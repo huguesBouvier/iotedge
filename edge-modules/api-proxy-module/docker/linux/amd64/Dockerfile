@@ -9,6 +9,7 @@ COPY ./docker/linux/amd64/api-proxy-module .
 COPY ./docker/linux/amd64/templates .
 RUN	apk update && \
     apk add nginx && \
+    apk add nginx-mod-stream && \
 	mkdir /run/nginx
 
 #expose ports
